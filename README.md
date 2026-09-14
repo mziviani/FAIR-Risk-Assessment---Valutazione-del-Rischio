@@ -36,7 +36,7 @@ Il sistema permette di simulare l'**Annual Loss Expectancy (ALE)** espressa in *
   * **Gruppo 2 (Sistema):** Valuta la forza difensiva intrinseca (*Control Strength CS%*) degli asset interni.
 * **Control Strength (CS) Pesata:** I controlli di sistema intrinseci sono pesati in base al loro reale impatto difensivo preventivo e di contenimento.
 * **Selettore Dinamico dei Controlli ("X"):** Attivazione puntuale delle mitigazioni presenti nell'architettura tramite flag `"X"`.
-* **Distribuzione Stocastica di Poisson (`EXP(-B20)`):** Modellazione del **Tempo di Ritorno** e dell'**Affidabilità Operativa Annua** mediante la funzione di sopravvivenza stocastica $P(k=0) = e^{-	ext{LEF}} = 	ext{EXP}(-	ext{B20})$.
+* **Distribuzione Stocastica di Poisson):** Modellazione del **Tempo di Ritorno** e dell'**Affidabilità Operativa Annua** mediante la funzione di sopravvivenza stocastica
 * **Separazione Netta dei Costi (63,8% Tecnici vs. 36,2% Data Breach):**
   * **Incidente Tecnico (Senza Fuga Dati - Primary Loss 63,8%):** Include *Detection & Escalation* (32,9%) e *Lost Business & Downtime* (30,9%). Spese legali e notifiche scendono a zero.
   * **Data Breach Completo (Con Fuga Dati - Secondary Loss 36,2%):** Aggiunge le spese legali/sanzioni (*Ex-Post Response* 27,3%) e notifiche Garante (*Notification* 9,0%), portando l'impatto economico al 100%.
@@ -65,9 +65,9 @@ Il modello consente di configurare in modo dinamico i seguenti parametri per ada
    * **GLOBAL** (Media Mondiale)
 4. **Classificazione degli Asset per Tier di Criticità:**
    * **Tier 0 (Life Critical / Safety Floor):** Sistemi la cui compromissione mette a rischio la vita umana o la sicurezza nazionale (es. Sanità, OT industriali, sistemi ESD/SIS, Dispositivi Medici UE Reg. 2017/745 MDR). *Tolleranza zero per la frequenza.*
-   * **Tier 1 (Mission Critical):** Asset essenziali per l'operatività aziendale (es. Domain Controller Active Directory, Core Banking, ERP primari).
-   * **Tier 2 (Operational):** Asset di supporto operativo (es. CRM, Database di produzione secondari, Portali clienti).
-   * **Tier 3 (Non-Critical):** Asset periferici a basso impatto (es. Server gestione sbarra parcheggio, sistemi di test).
+   * **Tier 1 (Mission Critical):** Asset essenziali per l'operatività aziendale.
+   * **Tier 2 (Operational):** Asset di supporto operativo .
+   * **Tier 3 (Non-Critical):** Asset periferici a basso impatto.
 
 ---
 
