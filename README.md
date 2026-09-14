@@ -40,7 +40,7 @@ Il sistema permette di simulare l'**Annual Loss Expectancy (ALE)** espressa in *
 * **Separazione Netta dei Costi (63,8% Tecnici vs. 36,2% Data Breach):**
   * **Incidente Tecnico (Senza Fuga Dati - Primary Loss 63,8%):** Include *Detection & Escalation* (32,9%) e *Lost Business & Downtime* (30,9%). Spese legali e notifiche scendono a zero.
   * **Data Breach Completo (Con Fuga Dati - Secondary Loss 36,2%):** Aggiunge le spese legali/sanzioni (*Ex-Post Response* 27,3%) e notifiche Garante (*Notification* 9,0%), portando l'impatto economico al 100%.
-* **Conversione e Formattazione Valuta in Euro (€):** Valori convertiti in Euro al tasso fisso configurabile ($1	ext{ USD} = 0,92	ext{ EUR}$) ed espressi in cifre intere (`€ #,##0`).
+* **Conversione e Formattazione Valuta in Euro (€):**
 
 ---
 
