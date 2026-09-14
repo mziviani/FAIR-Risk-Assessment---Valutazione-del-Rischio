@@ -5,7 +5,7 @@
 
 Modello quantitativo per la valutazione del rischio cyber basato sul framework **FAIR (Factor Analysis of Information Risk)** e conforme allo standard **ISO/IEC 27005:2022**.
 
-Il sistema permette di simulare l'**Annual Loss Expectancy (ALE)** espressa in **Euro (€ cifre intere)** per diverse tipologie di incidenti, integrando la **Control Strength (CS) pesata**, la modellazione stocastica di Poisson per il **tempo di ritorno e l'affidabilità operativa**, e i dati empirici dei report di Threat Intelligence 2026 (**IBM Cost of a Data Breach 2026**, **IBM X-Force 2026**, **Verizon DBIR 2026**, **Microsoft DDR 2025**, **ENISA 2025**).
+Il sistema permette di simulare l'**Annual Loss Expectancy (ALE)** espressa in **Euro** per diverse tipologie di incidenti, integrando la **Control Strength (CS) pesata**, la modellazione stocastica di Poisson per il **tempo di ritorno e l'affidabilità operativa**, e i dati empirici dei report di Threat Intelligence 2026 (**IBM Cost of a Data Breach 2026**, **IBM X-Force 2026**, **Verizon DBIR 2026**, **Microsoft DDR 2025**, **ENISA 2025**).
 
 ---
 
