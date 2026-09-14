@@ -2,8 +2,6 @@
 
 [![Framework](https://img.shields.io/badge/Framework-FAIR%20%2F%20ISO%2027005%3A2022-blue.svg)](https://www.openfair.org/)
 [![Data Source](https://img.shields.io/badge/Threat%20Intel-IBM%202026%20%7C%20DBIR%202026%20%7C%20MSFT%202025-orange.svg)]()
-[![Currency](https://img.shields.io/badge/Currency-EUR%20%281%20USD%20%3D%200.92%20EUR%29-green.svg)]()
-[![License](https://img.shields.io/badge/License-Open%20Source-brightgreen.svg)]()
 
 Modello quantitativo per la valutazione del rischio cyber basato sul framework **FAIR (Factor Analysis of Information Risk)** e conforme allo standard **ISO/IEC 27005:2022**.
 
