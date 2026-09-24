@@ -137,7 +137,10 @@ Il modello integra dati ed evidenze dai seguenti report e standard internazional
 5. **ENISA Threat Landscape 2025 Booklet:** Mappatura dei target critici della Pubblica Amministrazione e delle Entità Essenziali nell'Unione Europea.
 6. **CERT-EU Threat Landscape Report 2025:** Analisi delle minacce geopolitiche e cyberespionaggio verso le Istituzioni dell'Unione Europea.
 7. **ISO/IEC 27005:2022:** Standard internazionale per la gestione dei rischi di sicurezza delle informazioni (Sezione 6.4.2 per la definizione di Risk Appetite e soglie di tolleranza per asset Life Critical Tier 0).
-8. **MITRE ATT&CK v19.2 (Enterprise, Mobile, ICS):** Tassonomia e identificatori delle tecniche di attacco (T1190, T1566, T1078, T1486, T1195).
+8. **CrowdStrike Threat Hunting Report 2026 (Executive Summary):** Analisi delle minacce cross-domain, abuso di fiducia e compromissione dei flussi di autenticazione cloud (OAuth 2.0 device code flow, Entra ID)
+. Evidenzia l'aumento delle intrusioni via voice phishing (vishing) per la compromissione degli account Single Sign-On (SSO)
+ e l'abuso dei registri della software supply chain (npm, PyPI)
+9. **MITRE ATT&CK v19.2 (Enterprise, Mobile, ICS):** Tassonomia e identificatori delle tecniche di attacco (T1190, T1566, T1078, T1486, T1195).
 
 ---
 
