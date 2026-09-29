@@ -13,16 +13,16 @@ Il sistema permette di simulare l'**Annual Loss Expectancy (ALE)** espressa in *
 
 - [1. Caratteristiche Principali](#1-caratteristiche-principali)
 - [2. Parametri di Input e Personalizzazione dello Scenario](#2-parametri-di-input-e-personalizzazione-dello-scenario)
-- [3. 3. Catalogo dei 12 Vettori d'Attacco] (#3-Catalogo-dei-12-Vettori-d-Attacco).
-- [4. Catalogo e Descrizione delle Mitigazioni](#3-catalogo-e-descrizione-delle-mitigazioni)
+- [3. 3. Catalogo dei 12 Vettori d'Attacco](#3-Catalogo-dei-12-Vettori-d-Attacco).
+- [4. Catalogo e Descrizione delle Mitigazioni](#4-catalogo-e-descrizione-delle-mitigazioni)
   - [A. Gruppo 1: Mitigazioni Perimetriche (Abbattimento Contatti ΔCF% e Azione ΔPoA%)](#a-gruppo-1-mitigazioni-perimetriche-abbattimento-contatti-cf-e-azione-poa)
   - [B. Gruppo 2: Mitigazioni Intrinseche di Sistema (Control Strength CS% Pesato)](#b-gruppo-2-mitigazioni-intrinseche-di-sistema-control-strength-cs-pesato)
-- [5. Motore di Calcolo e Logica Quantitativa](#4-motore-di-calcolo-e-logica-quantitativa)
+- [5. Motore di Calcolo e Logica Quantitativa](#5-motore-di-calcolo-e-logica-quantitativa)
   - [A. Control Strength (CS) Pesata e Selettore ("X")](#a-control-strength-cs-pesata-e-selettore-x)
   - [B. Vulnerabilità Residua (V%) Moltiplicativa](#b-vulnerabilità-residua-v-moltiplicativa)
   - [C. Loss Event Frequency (LEF) e Modellazione Stocastica di Poisson](#c-loss-event-frequency-lef-e-modellazione-stocastica-di-poisson)
   - [D. Scomposizione della Loss Magnitude (LM) e dell'ALE (63,8% vs. 36,2%)](#d-scomposizione-della-loss-magnitude-lm-e-dellale-638-vs-362)
-- [6. Fonti di Dati e Referenze Bibliografiche](#5-fonti-di-dati-e-referenze-bibliografiche)
+- [6. Fonti di Dati e Referenze Bibliografiche](#6-fonti-di-dati-e-referenze-bibliografiche)
 
 
 ---
