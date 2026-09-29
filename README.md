@@ -13,7 +13,7 @@ Il sistema permette di simulare l'**Annual Loss Expectancy (ALE)** espressa in *
 
 - [1. Caratteristiche Principali](#1-caratteristiche-principali)
 - [2. Parametri di Input e Personalizzazione dello Scenario](#2-parametri-di-input-e-personalizzazione-dello-scenario)
-- [3. 3. Catalogo dei 12 Vettori d'Attacco](#3-Catalogo-dei-12-Vettori-d-Attacco).
+- [3. Catalogo dei 12 Vettori d'Attacco](#3-catalogo-dei-12-vettori-dattacco).
 - [4. Catalogo e Descrizione delle Mitigazioni](#4-catalogo-e-descrizione-delle-mitigazioni)
   - [A. Gruppo 1: Mitigazioni Perimetriche (Abbattimento Contatti ΔCF% e Azione ΔPoA%)](#a-gruppo-1-mitigazioni-perimetriche-abbattimento-contatti-cf-e-azione-poa)
   - [B. Gruppo 2: Mitigazioni Intrinseche di Sistema (Control Strength CS% Pesato)](#b-gruppo-2-mitigazioni-intrinseche-di-sistema-control-strength-cs-pesato)
