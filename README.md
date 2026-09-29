@@ -22,8 +22,7 @@ Il sistema permette di simulare l'**Annual Loss Expectancy (ALE)** espressa in *
   - [C. Loss Event Frequency (LEF) e Modellazione Stocastica di Poisson](#c-loss-event-frequency-lef-e-modellazione-stocastica-di-poisson)
   - [D. Scomposizione della Loss Magnitude (LM) e dell'ALE (63,8% vs. 36,2%)](#d-scomposizione-della-loss-magnitude-lm-e-dellale-638-vs-362)
 - [5. Fonti di Dati e Referenze Bibliografiche](#5-fonti-di-dati-e-referenze-bibliografiche)
-- [6. Struttura dei File Excel della Suite](#6-struttura-dei-file-excel-della-suite)
-- [7. Licenza Aperta e Feedback](#7-licenza-aperta-e-feedback)
+
 
 ---
 
