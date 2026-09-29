@@ -13,15 +13,16 @@ Il sistema permette di simulare l'**Annual Loss Expectancy (ALE)** espressa in *
 
 - [1. Caratteristiche Principali](#1-caratteristiche-principali)
 - [2. Parametri di Input e Personalizzazione dello Scenario](#2-parametri-di-input-e-personalizzazione-dello-scenario)
-- [3. Catalogo e Descrizione delle Mitigazioni](#3-catalogo-e-descrizione-delle-mitigazioni)
+- [3. 3. Catalogo dei 12 Vettori d'Attacco] (#3-Catalogo-dei-12-Vettori-d-Attacco).
+- [4. Catalogo e Descrizione delle Mitigazioni](#3-catalogo-e-descrizione-delle-mitigazioni)
   - [A. Gruppo 1: Mitigazioni Perimetriche (Abbattimento Contatti ΔCF% e Azione ΔPoA%)](#a-gruppo-1-mitigazioni-perimetriche-abbattimento-contatti-cf-e-azione-poa)
   - [B. Gruppo 2: Mitigazioni Intrinseche di Sistema (Control Strength CS% Pesato)](#b-gruppo-2-mitigazioni-intrinseche-di-sistema-control-strength-cs-pesato)
-- [4. Motore di Calcolo e Logica Quantitativa](#4-motore-di-calcolo-e-logica-quantitativa)
+- [5. Motore di Calcolo e Logica Quantitativa](#4-motore-di-calcolo-e-logica-quantitativa)
   - [A. Control Strength (CS) Pesata e Selettore ("X")](#a-control-strength-cs-pesata-e-selettore-x)
   - [B. Vulnerabilità Residua (V%) Moltiplicativa](#b-vulnerabilità-residua-v-moltiplicativa)
   - [C. Loss Event Frequency (LEF) e Modellazione Stocastica di Poisson](#c-loss-event-frequency-lef-e-modellazione-stocastica-di-poisson)
   - [D. Scomposizione della Loss Magnitude (LM) e dell'ALE (63,8% vs. 36,2%)](#d-scomposizione-della-loss-magnitude-lm-e-dellale-638-vs-362)
-- [5. Fonti di Dati e Referenze Bibliografiche](#5-fonti-di-dati-e-referenze-bibliografiche)
+- [6. Fonti di Dati e Referenze Bibliografiche](#5-fonti-di-dati-e-referenze-bibliografiche)
 
 
 ---
@@ -68,7 +69,28 @@ Il modello consente di configurare in modo dinamico i seguenti parametri per ada
 
 ---
 
-## 3. Catalogo e Descrizione delle Mitigazioni
+## 3. Catalogo dei 12 Vettori d'Attacco
+
+Di seguito è riportato il catalogo dei 12 vettori di minaccia modellati nel motore FAIR, con i relativi identificatori fisici, descrizioni sintetiche ed evidenze di Threat Intelligence 2026:
+
+| ID / MITRE | Vettore d'Attacco | Descrizione Operativa | Evidenze & Benchmark 2026 |
+| :--- | :--- | :--- | :--- |
+| **T1190** | **1. Exploitation of Public-Facing Applications** | Sfruttamento di vulnerabilità note (N-day) o zero-day in web app, API o servizi perimetrici pubblicati su Internet per ottenere un accesso iniziale non autorizzato. | **ENISA 2026:** Vettore #1 d'accesso in UE (**60,4%**).<br>**IBM X-Force 2026:** 40% degli accessi iniziali (+44% YoY).<br>**ISACA 2026:** 39% delle compromissioni. |
+| **T1566 / T1598** | **2. Phishing & Social Engineering (Email)** | Invio di messaggi email ingannevoli contenenti link malevoli, allegati weaponizzati o richieste di credenziali e frodi Business Email Compromise (BEC). | **ISACA 2026:** **45%** dei casi di compromissione.<br>**ENISA 2026:** 77,8% delle tecniche di social engineering.<br>**DBIR 2026:** 16% tasso mediano di click. |
+| **T1078 / T1110** | **3. Credential Abuse / Stolen Credentials** | Uso non autorizzato di credenziali valide trafugate (via infostealer, data breach terzi o attacchi brute force) per accedere ai sistemi d'intranet e cloud. | **IBM X-Force 2026:** 32% degli abusi via account validi.<br>**ISACA 2026:** 24% degli accessi remoti.<br>**MSFT DDR 2025:** 85% degli username presenti in breach. |
+| **T1486** | **4. System Intrusion & Ransomware** | Infiltrazione complessa e movimento laterale finalizzati alla cifratura dei sistemi, esfiltrazione di dati riservati e doppia/tripla estorsione finanziaria. | **ENISA 2026:** **47,3%** delle minacce finanziarie in UE.<br>**IBM X-Force 2026:** 109 gruppi ransomware attivi.<br>**DBIR 2026:** Presente nel 61% dei breach gravi. |
+| **T1195 / npm** | **5. Supply Chain & Open-Source Compromise** | Compromissione di fornitori terzi, librerie software open-source (repository npm, PyPI, GitHub) o aggiornamenti software per penetrare nell'organizzazione. | **ISACA 2026:** 11% dei casi via supply chain/API.<br>**CrowdStrike 2026:** 87% dei pacchetti malevoli concentrati in npm.<br>**ENISA 2026:** Elevato impatto sistemico su terze parti. |
+| **Human Factor** | **6. Coinvolgimento del Fattore Umano** | Errori operativi, disattenzioni, violazioni di policy, misconfigurazioni accidentali o vulnerabilità alla manipolazione da parte del personale interno. | **Verizon DBIR 2026:** **62%** dei breach coinvolge il fattore umano.<br>**ENISA 2026:** Errore e social eng al 20,7%.<br>**ISACA 2026:** 45% social engineering. |
+| **VERIS App** | **7. Basic Web Application Attacks** | Attacchi diretti alle applicazioni web aziendali (es. SQL Injection, Cross-Site Scripting XSS, Broken Access Control) per sottrarre dati o manipolare il servizio. | **IBM X-Force 2026:** **56%** delle vulnerabilità tracciate non richiede autenticazione.<br>**ISACA 2026:** 39% vuln exploitation. |
+| **VERIS Err** | **8. Miscellaneous Errors (Misconfiguration)** | Errate configurazioni di sicurezza (es. bucket cloud esposti, permessi IAM eccessivi, regole di firewall errate) che aprono la strada agli attaccanti. | **ENISA 2026:** **20,7%** degli accessi non autorizzati da esposizione accidentale.<br>**ISACA 2026:** 39% unpatched/misconfigured systems. |
+| **T1078.003** | **9. Privilege Misuse & Insider Threat** | Abuso intenzionale o malevolo dei privilegi d'accesso assegnati a dipendenti, consulenti o utenti interni per sottrarre dati o danneggiare asset. | **ISACA 2026:** **21%** delle aziende rileva insider threat.<br>**ENISA 2026:** 10,1% degli incidenti idenficati.<br>**DBIR 2026:** 60% motivato da comodo personale. |
+| **T1204.001** | **10. ClickFix & Social Browser Attacks** | Tecniche avanzate di social engineering basate su falsi messaggi d'errore del browser che inducono gli utenti a eseguire comandi malevoli (es. PowerShell). | **ENISA 2026:** Inserito tra i vettori emergenti a più rapida crescita.<br>**MSFT DDR 2025:** Diffusione massiva di Fake Browser Updates/ClickFix. |
+| **T1566.004** | **11. Vishing / Voice Social Engineering & SSO** | Attacchi telefonici con ingegneria sociale o deepfake vocali rivolti all'helpdesk o utenti per bypassare l'MFA e compromettere account Single Sign-On (SSO). | **CrowdStrike 2026:** Attacchi Vishing **+134% YoY** (compromissione SSO in <5 min).<br>**ENISA 2026:** 1,9% del social engineering UE. |
+| **T1528 / OAuth** | **12. Device Code & OAuth Consent Phishing** | Abuso dei flussi di autorizzazione OAuth 2.0 e del Device Code Flow (es. su Microsoft Entra ID) per induzione al consenso malevolo senza rubare la password. | **CrowdStrike 2026:** Tentativi di Device Code Phishing **aumentati di 15 volte** nella prima metà del 2026 su ambienti Entra ID. |
+
+---
+
+## 4. Catalogo e Descrizione delle Mitigazioni
 
 ### A. Gruppo 1: Mitigazioni Perimetriche (Abbattimento Contatti ΔCF% e Azione ΔPoA%)
 
@@ -94,7 +116,7 @@ I controlli intrinseci di sistema definiscono la resilienza dell'asset qualora l
 
 ---
 
-## 4. Motore di Calcolo e Logica Quantitativa
+## 5. Motore di Calcolo e Logica Quantitativa
 
 ### A. Control Strength (CS) Pesata e Selettore ("X")
 
@@ -125,7 +147,7 @@ In conformità con i benchmark del report **IBM Cost of a Data Breach 2026**:
 
 ---
 
-## 5. Fonti di Dati e Referenze Bibliografiche
+## 6. Fonti di Dati e Referenze Bibliografiche
 
 Il modello integra dati ed evidenze dai seguenti report e standard internazionali:
 
